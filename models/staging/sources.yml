@@ -1,0 +1,54 @@
+version: 2
+
+sources:
+  - name: adventure_works
+    database: fea24_4
+    schema: raw_adventure_works
+    tables: 
+      - name: "address"
+        description: "Tabela com informações sobre endereço."
+
+      - name: "countryregion"
+        description: "Tabela com informações sobre país."
+
+      - name: "person"
+        description: "Tabela com informações sobre funcionários e clientes."
+
+      - name: "stateprovince"
+        description: "Tabela com informações sobre Estado."
+
+      - name: "product"
+        description: "Tabela com informações sobre os produtos."
+
+      - name: "creditcard"
+        description: "Tabela com informações sobre tipo de cartão de crédito."
+
+      - name: "customer"
+        description: "Tabela com informações sobre clientes."
+             
+      - name: "salesorderdetail"
+        description: "Tabela com informações de pedidos de compra na granularidade de produto."
+        columns:
+          - name: "salesorderdetailid"
+            description: "Identificador único da tabela."
+            tests:
+              - unique
+              - not_null
+
+      - name: "salesorderheader"
+        description: "Tabela com informações de pedidos de compra na granularidade de pedido."
+        columns:
+          - name: "salesorderid"
+            description: "Identificador único da tabela."
+            tests:
+              - unique
+              - not_null
+
+      - name: "salesorderheadersalesreason"
+        description: "Tabela com IDs relacionados às razões de compra."
+
+      - name: "salesreason"
+        description: "Tabela com informações sobre razões de compra."
+
+      - name: "salesterritoryhistory"
+        description: "Tabela com informações sobre território de venda."

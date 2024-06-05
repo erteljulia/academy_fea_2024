@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: dim_cartao
+    columns:
+      - name: 'sk_cartao'
+        description: "Chave SK de creditcardid."
+        tests:
+          - not_null
+          - unique
+
+      - name: 'pk_cartao_credito_id'
+        description: "Coluna com o ID do cartão de crédito. Chave primária."
+      
+      - name: 'tipo_cartao'
+        description: "Coluna com o tipo de cartão de crédito."
+        

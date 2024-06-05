@@ -1,0 +1,60 @@
+version: 2
+
+models:
+  - name: int_pedidos_vendas_itens
+    columns:
+      - name: 'sk_pedidos_vendas_itens'
+        description: "Coluna com a chave SK criada com pedido_vendas.pk_pedido_venda_id e pedido_vendas_itens.fk_produto."
+        tests:
+          - not_null
+          - unique
+      
+      - name: 'pk_pedido_venda_item'
+        description: "Coluna com o ID para identificar cada item do pedido. Chave primária."
+        tests:
+          - unique
+
+      - name: 'pk_pedido_venda_id'
+        description: "Coluna com o ID do pedido. Chave primária."
+
+      - name: 'fk_produto'
+        description: "Coluna com o ID do cadastro do produto. Chave estrangeira."
+         
+      - name: 'fk_endereco_id'
+        description: "Coluna com o ID do endereço. Chave estrangeira."
+
+      - name: 'fk_cliente'
+        description: "Coluna com o ID do cliente. Chave estrangeira."
+
+      - name: 'fk_territorio_id'
+        description: "Coluna com o ID do território onde o Estado está localizado. Chave estrangeira."
+        
+      - name: 'fk_cartao_credito_id'
+        description: "Coluna com o ID do tipo de cartão de crédito. Chave estrangeira."
+
+      - name: 'flag_canal_pedido'
+        description: "Coluna que indica se o pedido foi feito online ou junto a um vendedor."
+
+      - name: 'status_pedido'
+        description: "Coluna com o status do pedido, como aprovado, sem estoque, enviado, cancelado, etc."
+
+      - name: 'total_pedido_rateado'
+        description: "Coluna com o valor total do pedido rateado entre a quantidade de vezes que o pk_pedido_venda aparece na tabela."
+
+      - name: 'quantidade_itens'
+        description: "Coluna com a quantidade de itens por produto."
+      
+      - name: 'preco_unitario'
+        description: "Coluna com o valor unitário do produto."
+
+      - name: 'desconto_unitario'
+        description: "Coluna com a porcentagem de desconto do produto."
+
+      - name: 'data_pedido'
+        description: "Coluna com a data em que o pedido foi criado."
+        
+      - name: 'data_pagamento'
+        description: "Coluna com a data de vencimento do pagamento."
+
+      - name: 'data_modificacao'
+        description: "Coluna com a data de modificação dos dados."

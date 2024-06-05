@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: dim_localizacao
+    columns:
+      - name: 'localizacao_sk'
+        description: "Chave SK criada com endereco.pk_endereco_id e estado.pk_estado_id."
+        tests:
+          - unique
+          - not_null
+       
+      - name: 'fk_codigo_pais'
+        description: "Coluna com o código padrão do País. Chave estrangeira."
+      
+      - name: 'pk_endereco_id'
+        description: "Coluna com o ID do cadastro de endereço. Chave primária."
+
+      - name: 'fk_estado_id'
+        description: "Coluna com o ID da província/Estado. Chave estrangeira."
+        
+      - name: 'fk_territorio_id'
+        description: "Coluna com o ID do território onde o Estado está localizado. Chave estrangeira."
+
+      - name: 'cidade'
+        description: "Coluna com o nome da cidade."
+
+      - name: 'nome_estado'
+        description: "Coluna com o nome do Estado."
+
+      - name: 'nome_pais'
+        description: "Coluna com o nome do país."
+      
+      - name: 'endereco'
+        description: "Coluna com o endereço."
