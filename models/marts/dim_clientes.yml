@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: dim_clientes
+    columns:
+      - name: 'sk_clientes'
+        description: "Chave SK criada com as colunas pk_entidade_negocios_id e pk_clientes."
+        tests:
+          - unique
+          - not_null
+                   
+      - name: 'pk_clientes'
+        description: Coluna com o ID do cliente. Chave primária.
+               
+      - name: 'fk_territorio_id'
+        description: "Coluna com ID do território. Chave estrangeira."
+                  
+      - name: 'fk_entidade_negocios_id'
+        description: "Coluna com a ID do cadastro de pessoas. Chave estrangeira."
+                                            
+      - name: 'nome_completo'
+        description: "Coluna com o nome completo das pessoas."
+
+      - name: 'pessoa_segmentacao'
+        description: "Coluna com o tipo de pessoa, identifica se é funcionário, vendedor, fornecedor, cliente, etc."

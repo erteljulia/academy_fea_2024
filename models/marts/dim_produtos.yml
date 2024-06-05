@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: dim_produtos
+    columns:
+      - name: 'produto_sk'
+        description: "Chave SK de pk_produto."
+        tests:
+          - not_null
+          - unique
+
+      - name: 'pk_produto'
+        description: "Coluna com o ID do produto. Chave primária."
+
+      - name: 'nome_produto'
+        description: "Coluna com o nome do produto."
+
+      - name: 'custo'
+        description: "Coluna com o custo padrão do produto."
+
+      - name: 'preco_venda'
+        description: "Coluna com o preço de venda do produto."
+      
+      - name: 'data_modificacao'
+        description: "Coluna com a última data de modificação dos dados."
