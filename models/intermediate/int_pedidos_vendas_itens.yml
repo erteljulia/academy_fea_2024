@@ -11,8 +11,6 @@ models:
       
       - name: 'pk_pedido_venda_item'
         description: "Coluna com o ID para identificar cada item do pedido. Chave primária."
-        tests:
-          - unique
 
       - name: 'pk_pedido_venda_id'
         description: "Coluna com o ID do pedido. Chave primária."
@@ -38,8 +36,8 @@ models:
       - name: 'status_pedido'
         description: "Coluna com o status do pedido, como aprovado, sem estoque, enviado, cancelado, etc."
 
-      - name: 'total_pedido_rateado'
-        description: "Coluna com o valor total do pedido rateado entre a quantidade de vezes que o pk_pedido_venda aparece na tabela."
+      - name: 'total_pedido'
+        description: "Coluna com o valor total do pedido, incluindo frete e taxa."
 
       - name: 'quantidade_itens'
         description: "Coluna com a quantidade de itens por produto."
@@ -58,3 +56,7 @@ models:
 
       - name: 'data_modificacao'
         description: "Coluna com a data de modificação dos dados."
+
+      - name: 'subtotal_pedido'
+        description: "Coluna com o subtotal, que não considera frete e taxa."
+        

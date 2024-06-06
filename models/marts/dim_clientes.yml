@@ -11,6 +11,9 @@ models:
                    
       - name: 'pk_clientes'
         description: Coluna com o ID do cliente. Chave primária.
+        tests:
+          - not_null
+          - unique
                
       - name: 'fk_territorio_id'
         description: "Coluna com ID do território. Chave estrangeira."

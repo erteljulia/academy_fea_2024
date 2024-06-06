@@ -20,10 +20,8 @@ with
             , pedido_vendas.vendedor_id
             , pedido_vendas.flag_canal_pedido
             , pedido_vendas.status_pedido
-            , cast(
-                pedido_vendas.total_pedido / count(pk_pedido_venda_id) over (partition by pk_pedido_venda_id)
-                as numeric(18,2)
-            ) as total_pedido_rateado
+            , pedido_vendas.subtotal_pedido
+            , pedido_vendas.total_pedido
             , pedido_vendas_itens.quantidade_itens
             , pedido_vendas_itens.preco_unitario
             , pedido_vendas_itens.desconto_unitario

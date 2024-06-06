@@ -49,6 +49,3 @@ sources:
 
       - name: "salesreason"
         description: "Tabela com informações sobre razões de compra."
-
-      - name: "salesterritoryhistory"
-        description: "Tabela com informações sobre território de venda."
