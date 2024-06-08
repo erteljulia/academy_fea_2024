@@ -6,4 +6,4 @@ with
     )
 select total_bruto
 from vendas_brutas_2011 -- $12.646.112,16 esse é o valor repassado pelo CEO
-where cast(total_bruto as numeric(18,4)) != 12646112.1607
+where total_bruto != 12646112.1607

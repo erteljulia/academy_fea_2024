@@ -15,7 +15,6 @@ with
     , joined as (
         select 
             motivos_pedidos.fk_pedido_venda_id
-            , listagg(motivo.nome_motivo, ', ') within group (order by motivo.nome_motivo) as motivos_agregados
             , listagg(to_varchar(motivo.pk_motivo), ', ') within group (order by motivo.pk_motivo) as id_motivos_agregados
             , listagg(motivo.tipo_motivo, ', ') within group (order by motivo.tipo_motivo) as tipo_motivo
         from motivo

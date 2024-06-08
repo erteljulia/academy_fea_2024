@@ -1,15 +1,11 @@
-Welcome to your new dbt project!
+Boas-vindas ao meu projeto para Certificação em Engenharia de Analytics da Indicium Academy.
 
-### Using the starter project
+Neste repositório temos a transformação dos dados brutos em camadas intermediate, staging e marts, além de testes de dados e testes de schemas.
 
-Try running the following commands:
-- dbt run
-- dbt test
+Foram utilizados dados da Adventure Works Cycles.
 
+DW: Snowflake
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [dbt community](https://getdbt.com/community) to learn from other analytics engineers
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+Transformação de dados: dbt Cloud
+
+Visualização de dados: Power BI [acesse aqui](https://app.powerbi.com/view?r=eyJrIjoiOGEwZTliMjUtMTQ5NC00NGYxLWIyY2ItMGE3MDkxZjA4MjVlIiwidCI6Ijc3ZTUyN2NkLWFkNWYtNDVmMC1iZjg5LWRmYTkwZWRkMGEyNyJ9)

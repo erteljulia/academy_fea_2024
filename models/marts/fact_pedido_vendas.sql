@@ -46,7 +46,7 @@ with
             , preco_unitario
             , desconto_unitario
             , quantidade_itens * preco_unitario as valor_bruto
-            , quantidade_itens * (1 - desconto_unitario) * preco_unitario as valor_liquido
+            , quantidade_itens * preco_unitario - (1 - desconto_unitario) as valor_liquido
             , data_pedido
             , data_pagamento
             , data_modificacao
@@ -77,7 +77,7 @@ with
             , pedido_vendas_itens.quantidade_itens
             , pedido_vendas_itens.preco_unitario
             , pedido_vendas_itens.desconto_unitario
-            , pedido_vendas_itens.valor_bruto
+            , cast(pedido_vendas_itens.valor_bruto as numeric(18,4)) as valor_bruto
             , pedido_vendas_itens.valor_liquido
             , pedido_vendas_itens.data_pedido
             , pedido_vendas_itens.data_pagamento
