@@ -1,4 +1,4 @@
-with 
+salesorderwith 
     motivo_pedidos as (
         select
             salesorderid as fk_pedido_venda_id
