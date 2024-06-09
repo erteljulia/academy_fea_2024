@@ -11,6 +11,9 @@ models:
 
       - name: 'pk_cartao_credito_id'
         description: "Coluna com o ID do cartão de crédito. Chave primária."
+        tests:
+          - not_null
+          - unique
       
       - name: 'tipo_cartao'
         description: "Coluna com o tipo de cartão de crédito."

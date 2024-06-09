@@ -14,14 +14,12 @@ with
     )
     , joined as (
         select 
-            {{ dbt_utils.generate_surrogate_key(['motivo.pk_motivo', 'motivos_pedidos.fk_pedido_venda_id']) }} as sk_motivo
-            , motivos_pedidos.fk_pedido_venda_id
-            , array_to_string(array_agg(cast(pk_motivo as string)), ', ') as id_motivos_agregados
-            , array_to_string(array_agg(nome_motivo), ', ') as motivos_agregados
-            , motivo.tipo_motivo
+            motivos_pedidos.fk_pedido_venda_id
+            , listagg(to_varchar(motivo.pk_motivo), ', ') within group (order by motivo.pk_motivo) as id_motivos_agregados
+            , listagg(motivo.tipo_motivo, ', ') within group (order by motivo.tipo_motivo) as tipo_motivo
         from motivo
         left join motivos_pedidos on motivos_pedidos.fk_motivo = motivo.pk_motivo
-        group by motivo.pk_motivo, motivos_pedidos.fk_pedido_venda_id, motivo.tipo_motivo
+        group by motivos_pedidos.fk_pedido_venda_id
     )
 select *
 from joined

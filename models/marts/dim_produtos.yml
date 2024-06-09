@@ -11,6 +11,9 @@ models:
 
       - name: 'pk_produto'
         description: "Coluna com o ID do produto. Chave primária."
+        tests:
+          - not_null
+          - unique
 
       - name: 'nome_produto'
         description: "Coluna com o nome do produto."

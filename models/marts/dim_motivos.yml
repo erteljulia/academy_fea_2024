@@ -2,10 +2,7 @@ version: 2
 
 models:
   - name: dim_motivos
-    columns:
-      - name: 'sk_motivo'
-        description: "Coluna com chave SK criada com motivo.pk_motivo e motivos_pedidos.fk_pedido_venda_id."
-      
+    columns: 
       - name: 'fk_pedido_venda_id'
         description: Coluna com o ID do pedido de venda. Chave estrangeira.
         
